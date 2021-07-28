@@ -3,7 +3,7 @@ import StockContainer from "./StockContainer";
 import PortfolioContainer from "./PortfolioContainer";
 import SearchBar from "./SearchBar";
 
-function MainContainer({ stockList, sortButton }) {
+function MainContainer({ stockList, sortButton, filterHandle }) {
   const [boughtStockList, setBoughtStockList] = useState([])
 
   function buyStock(id) {
@@ -30,7 +30,7 @@ function MainContainer({ stockList, sortButton }) {
 
   return (
     <div>
-      <SearchBar sortButton={sortButton} checked={checked}/>
+      <SearchBar sortButton={sortButton} filterHandle={filterHandle}/>
       <div className="row">
         <div className="col-8">
           <StockContainer stockList={stockList} buyStock={buyStock}/>

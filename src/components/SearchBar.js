@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function SearchBar({ sortButton }) {
+function SearchBar({ sortButton, filterHandle }) {
 
 
 
@@ -31,7 +31,7 @@ function SearchBar({ sortButton }) {
       <br />
       <label>
         <strong>Filter:</strong>
-        <select onChange={null}>
+        <select onChange={filterHandle}>
           <option value="Tech">Tech</option>
           <option value="Sportswear">Sportswear</option>
           <option value="Finance">Finance</option>
